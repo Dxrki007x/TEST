@@ -1,0 +1,44 @@
+/* Center the flowers in the body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #FFB6C1;
+    overflow: hidden;
+}
+
+.flower-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+/* Basic styling for each petal */
+.petal {
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    transform-origin: bottom center;
+    opacity: 0.8;
+    animation: bloom 3s ease-in-out infinite;
+}
+
+/* Rotate each petal to create a flower shape */
+.petal:nth-child(1) { transform: rotate(0deg); }
+.petal:nth-child(2) { transform: rotate(45deg); }
+.petal:nth-child(3) { transform: rotate(90deg); }
+.petal:nth-child(4) { transform: rotate(135deg); }
+.petal:nth-child(5) { transform: rotate(180deg); }
+.petal:nth-child(6) { transform: rotate(225deg); }
+.petal:nth-child(7) { transform: rotate(270deg); }
+.petal:nth-child(8) { transform: rotate(315deg); }
+
+/* Blooming animation */
+@keyframes bloom {
+    0%, 100% { transform: scale(1) translateY(0); }
+    50% { transform: scale(1.1) translateY(-10px); }
+}

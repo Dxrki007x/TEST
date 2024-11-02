@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">DOCWITNU</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#product">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="#" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+
+    <section class="home">
+        <h1>About us</h1>
+        
+    </section>
+
+    <section class="products">
+        <h1>Shop Our Products</h1>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 1">
+                <h2>Product 1</h2>
+                <p>$10.00</p>
+                <button onclick="addToCart(1, 'Product 1', 10)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 2">
+                <h2>Product 2</h2>
+                <p>$20.00</p>
+                <button onclick="addToCart(2, 'Product 2', 20)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="cart-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="toggleCartPopup()">&times;</span>
+            <h1>Your Cart</h1>
+            <div id="cart-items"></div>
+            <p>Total: $<span id="total-price">0.00</span></p>
+            <button id="checkout" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 E-Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
